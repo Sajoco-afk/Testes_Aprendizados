@@ -21,7 +21,7 @@ Os códigos podem variar bastante em complexidade, pois o objetivo principal é 
 
 ---
 
-## 🧪 Teste Atual
+## 🧪 Testes e Exercícios
 
 ### `PromocaoAutomatica.java`
 
@@ -56,6 +56,78 @@ O objetivo é compreender melhor como o Java trabalha com **conversão e promoç
 
 ---
 
+### `BreakContinue.java`
+
+Exercício desenvolvido para praticar o uso das palavras-chave **`break`** e **`continue`** dentro de uma estrutura de repetição `for`.
+
+O programa utiliza uma sequência de códigos de carteirinha de convênio médico e verifica quais códigos são aceitos pelo **Hospital Santa Clara**.
+
+Os códigos aceitos são:
+
+```text
+3
+7
+10
+```
+
+### 🔄 Conceitos praticados
+
+#### `break`
+
+O comando `break` é utilizado para **interromper completamente o laço de repetição** quando o código da carteirinha corresponde ao código definido como saída.
+
+Exemplo:
+
+```java
+if (codigoCarteirinha == codigoDeSaida) {
+    System.out.println("Código de saída encontrado, encerrando!");
+    break;
+}
+```
+
+Quando essa condição é verdadeira, o `for` é encerrado imediatamente.
+
+#### `continue`
+
+O comando `continue` é utilizado quando o código é aceito pelo hospital.
+
+Nesse caso, o programa apresenta a mensagem correspondente e pula o restante da iteração atual, passando para o próximo código.
+
+Exemplo:
+
+```java
+if (codigoCarteirinha == 3 ||
+    codigoCarteirinha == 7 ||
+    codigoCarteirinha == 10) {
+
+    System.out.println("Código aceito! " + codigoCarteirinha);
+    continue;
+}
+```
+
+### 💡 Teste realizado
+
+Durante o exercício, o valor de `codigoDeSaida` foi alterado para diferentes números para observar como o comportamento do `break` modifica a execução do programa.
+
+Também foi utilizado o valor:
+
+```java
+int codigoDeSaida = 11;
+```
+
+Nesse caso, como o `for` percorre somente os códigos de **1 a 10**, o código de saída não é encontrado e o laço percorre todas as iterações.
+
+### 🎯 Objetivo do exercício
+
+Compreender na prática a diferença entre:
+
+```text
+break    → interrompe o laço completamente
+continue → pula a iteração atual e continua o laço
+```
+
+---
+
 ## 🛠️ Tecnologias
 
 * ☕ Java
@@ -74,6 +146,7 @@ Os testes serão adicionados ao repositório conforme novos conceitos forem estu
 TestesJava/
 │
 ├── PromocaoAutomatica.java
+├── BreakContinue.java
 ├── Variaveis.java
 ├── Operadores.java
 ├── Condicionais.java
